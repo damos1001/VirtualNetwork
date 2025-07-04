@@ -20,3 +20,8 @@ provider "azurerm" {
   
 }
 
+terraform {
+  backend "local" {}
+}
+
+
