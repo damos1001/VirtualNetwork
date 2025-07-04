@@ -27,7 +27,6 @@ steps:
     provider: 'azurerm'
     command: 'init'
     backendServiceArm: 'conn-dev-darren-2'
-    backendAzureRmOverrideSubscriptionID: '47e47772-a320-494e-a42b-6e7479d10c5e'
     backendAzureRmStorageAccountName: 'sacstatefile0001'
     backendAzureRmContainerName: 'tf-state'
     backendAzureRmKey: 'dev-darren-2.terraform.tfstate'
