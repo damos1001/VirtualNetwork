@@ -14,7 +14,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    backendServiceArm: 'conn-sub-daz-sandbox'
+    backendServiceArm: 'conn-dev-darren-2'
     backendAzureRmResourceGroupName: 'terraform-state'
     backendAzureRmStorageAccountName: 'sacstatefile0001'
     backendAzureRmContainerName: 'tf-state-virtualnetwork'
@@ -24,4 +24,4 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    environmentServiceNameAzureRM: 'conn-sub-daz-sandbox'
+    environmentServiceNameAzureRM: 'conn-dev-darren-2'
