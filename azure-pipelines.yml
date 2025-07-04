@@ -6,6 +6,14 @@
 trigger:
 - main
 
+resources:
+  repositories:
+    - repository: virtualnetwork
+      type: github
+      ref: 'main'
+      name: damos1001/virtualnetwork/example/nr
+      endpoint: 'damos1001'
+
 pool:
   vmImage: ubuntu-latest
 
