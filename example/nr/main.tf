@@ -5,7 +5,7 @@
 # The resource group is created in the specified Azure region
 
 module "azurerm_resource_group" {
-  source   = "git::https://github.com/damos1001/virtualnetwork/virtualnetwork/modules.git"
+  source   = "git::https://github.com/damos1001/VirtualNetwork/modules/resourcegroup.git"
   name     = var.resource_group_name
   location = var.location
 
@@ -13,7 +13,7 @@ module "azurerm_resource_group" {
 
 # Create a virtual network within the resource group
 module "azurerm_virtual_network" {
-  source              = "git::https://github.com/damos1001/virtualnetwork/virtualnetwork/modules.git"
+  source              = "git::https://github.com/damos1001/VirtualNetwork/modules/virtualnetwork.git"
   name                = var.vnet_name
   resource_group_name = module.azurerm_resource_group.resource_group_name
   location            = var.location
