@@ -31,3 +31,10 @@ steps:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'conn-dev-darren-2'
+
+ - task: TerraformTaskV4@4
+  displayName: apply
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    environmentServiceNameAzureRM: 'conn-dev-darren-2'
