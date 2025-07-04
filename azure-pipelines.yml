@@ -3,37 +3,33 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: none
+trigger:
+- main
 
 pool:
-  vmImage: ubuntu-latest
 
 steps:
 - task: TerraformInstaller@1
   inputs:
     terraformVersion: 'latest'
 
-
-- task: TerraformTaskV4@4
-  displayName: init
+- task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'init'
     backendServiceArm: 'conn-dev-darren-2'
-    backendAzureRmResourceGroupName: 'terraform-state'
+    backendAzureRmOverrideSubscriptionID: '47e47772-a320-494e-a42b-6e7479d10c5e'
     backendAzureRmStorageAccountName: 'sacstatefile0001'
     backendAzureRmContainerName: 'tf-state'
-    backendAzureRmKey: 'terraform.tfstate'
+    backendAzureRmKey: 'dev-darren-2.terraform.tfstate'
 
-- task: TerraformTaskV4@4
-  displayName: plan
+- task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'plan'
     environmentServiceNameAzureRM: 'conn-dev-darren-2'
 
- - task: TerraformTaskV4@4
-  displayName: apply
+- task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'apply'
