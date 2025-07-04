@@ -11,7 +11,7 @@ resources:
     - repository: virtualnetwork
       type: github
       ref: 'main'
-      name: damos1001/VirtualNetwork/example/nr
+      name: damos1001/VirtualNetwork
       endpoint: 'damos1001'
 
 pool:
